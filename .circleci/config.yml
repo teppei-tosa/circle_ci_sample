@@ -4,6 +4,8 @@ dependencies:
     - echo "export rvm_ignore_gemsets_flag=1" >> ~/.rvmrc - gem install bundler
 jobs:
   build:
+    docker:
+       - image: debian:stretch
     steps:
       - checkout
       - run:
