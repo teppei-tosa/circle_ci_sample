@@ -11,9 +11,6 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-machine:
-  ruby:
-    version: ruby-2.4.2
-test:
-  override:
-    - bundle exec danger
+      - run:
+          name: Run danger
+          comand: bundle exec danger
