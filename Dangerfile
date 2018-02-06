@@ -11,3 +11,7 @@ fail("a large PR") if git.lines_of_code > 300
 
 # Warn when PR has no assignees
 warn("A pull request must have some assignees") if github.pr_json["assignee"].nil?
+
+unless github.pr_description.include? "https://"
+  fail("PRの根拠となる情報のリンクをDescriptionに記載してください")
+end
