@@ -1,7 +1,7 @@
 version: 2
-dependencies:
-  pre:
-    - gem install bundler --pre
+#dependencies:
+#  pre:
+#    - gem install bundler --pre
 jobs:
   build:
     docker:
@@ -11,6 +11,8 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, world.
+      - run:
+          command: gem install bundler --pre
       - run:
           name: Print the Current Time
           command: date
